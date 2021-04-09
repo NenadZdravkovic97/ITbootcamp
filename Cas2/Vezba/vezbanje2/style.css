@@ -1,0 +1,34 @@
+body {
+    background-color: lightgrey;
+}
+
+h2 {
+    text-align: center;
+    color: green;
+}
+
+a img {
+    /* border: 10px double orange; */
+    border-style: double;
+    border-color: orange;
+}
+
+p.prviItreciP {
+    color: orchid;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+p#drugiP {
+    color: lime;
+}
+
+p#drugiP a#yt {
+    color: red;
+    transition: 0.4s;
+}
+
+p#drugiP a#yt:hover {
+    color: green;
+}
+
