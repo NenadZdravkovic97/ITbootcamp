@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 700px;
+    height: 100px;
+}
+
+table td, tr, th {
+    border: 1px solid silver;
+    padding: 10px;
+
+}
+
+#drugiRow {
+    background-color: yellow;
+}
+
+.emailZuto {
+    background-color: yellow;
+}
+
+#prvaTabela tr:nth-child(odd) {
+    font-style: italic;
+}
