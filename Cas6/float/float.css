@@ -1,0 +1,15 @@
+#float {
+    background-color: crimson;
+    overflow: hidden;
+}
+
+#float p {
+    background-color: darkgrey;
+    float: right;
+    width: 250px;
+    margin: 20px;
+}
+
+#float p:first-child {
+    float: left;
+}

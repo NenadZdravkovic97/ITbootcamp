@@ -1,0 +1,15 @@
+img, p {
+    float: left;
+    margin: 10px;
+}
+div{
+    position: relative;
+}
+
+.paragrafi {
+   position: absolute;
+   top: 250px;
+}
+
+
+
