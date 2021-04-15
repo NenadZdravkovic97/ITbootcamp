@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: fixed; /*iscupali smo meni i fiskirali smo ga*/
+    top: 0;
+    width: 100%;
+}
+
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+    width: 25%;
+    border: 2px solid white; /* ulazi u sirinu zbog border box */
+    background-color: chocolate;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+nav ul li a:hover {
+    background-color: red;
+}
+
+.submenu {
+    position: absolute; /*cupamo submeni*/
+    background-color: cornflowerblue;
+    width: 25%; /*moze 100% kad nema position absolute*/
+    display: none;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+
+/* div koji wrappuje sve nakon fix nava #rest {
+    position: relative; ostatak stranice ispod navigacije moze i na body padding-top 40px
+    top: 40px;
+} */
+
+body {
+    padding-top: 40px;
+}
+
+
+section {
+    background-color: coral;
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+}
+
+/* display, visbility
+display: none;
+visibility: hidden;
+*/
+
+section:nth-of-type(1) {
+    display: none;
+}
+
+section:nth-of-type(2) {
+    visibility: hidden;
+}
+
+
+/* FOOTER  */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    background-color: chocolate;
+    width: 25%;
+    text-align: center;
+    list-style: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 10px;
+}
+
+footer ul li a:hover {
+    background-color: red;
+}
+
