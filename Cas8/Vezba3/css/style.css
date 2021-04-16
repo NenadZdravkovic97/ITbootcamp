@@ -1,0 +1,70 @@
+/* HEADER  */
+
+header {
+    background-color: aqua;  
+    text-align: center;  
+    padding: 15px 0;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+
+
+/* NAVIGACIJA  */
+
+nav ul {
+    list-style-type: none;
+    background-color: darkturquoise;
+}
+
+nav ul li {
+    border-bottom: 1px solid aqua;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: aqua;
+}
+
+/* ASIDE I TEKST-SECTION */
+
+aside,
+.gradient {
+    background-image: linear-gradient(darkturquoise, white);
+}
+
+aside {
+    height: 119px;
+}
+
+
+/* IMAGES  */
+
+section img {
+    max-width: 100%;
+}
+
+
+/* FOOTER  */
+
+footer {
+    background-color: aqua;
+    padding: 5px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+/* PODIGNEMO POSLEDNJI RED ZA VISINU FOOTERA JER JE FOOTER FIKSIRAN UZ DONJU IVICU  */
+
+.gradient {
+    margin-bottom: 30px;
+}
+
