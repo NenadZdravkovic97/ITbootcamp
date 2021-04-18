@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+}
+
+[class*="col-"] { 
+    float: left;
+}
+
+/* za mobilne uredjaje*/
+@media only screen and (max-width: 1000px){
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        border-top: 1px solid grey;
+    }
+
+    nav ul li a {
+        padding: 10px;
+
+    }
+}
+
+
+/* Za dekstop uredjaje*/
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+/* za tablete */
+@media only screen and (min-width: 451px) and (max-width: 800px) {
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+}
+
+/* HEADERR  */
+
+h1 {
+    color: #2E88DB;
+    text-align: center;
+}
+
+/* NAVIGACIJA  */
+nav {
+    overflow: hidden;
+    background-color: #2E88DB;
+}
+nav ul {
+    list-style: none;
+}
+
+nav ul li a img {
+    height: 25px;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 25px;
+}
+
+nav ul li a:hover {
+    background-color: red;
+}
+
+
+/* LETOVI I DESTINACIJE */
+
+.letoviDestinacije {
+    margin: 10px 0px 10px 10px;
+}
+
+.letoviDestinacije img, .informacijeKontakt img {
+    width: 300px;
+}
+
+.letoviDestinacije div, .informacijeKontakt div{
+    margin: 20px;
+}
+
+.letoviDestinacije ul {
+    list-style-type: none;
+}
+
+.letoviDestinacije ul li {
+    background-color: #EEE9E9;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.letoviDestinacije ul li:hover {
+    background-color: burlywood;
+    color: white;
+}
+
+
+/* forma  */
+
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+}
+
+input[type="submit"] {
+    border: none;
+    background-color: #2E88DB;
+    padding: 10px;
+    color: white;
+}
