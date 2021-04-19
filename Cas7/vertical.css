@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    width: 25%;
+    background-color: chocolate;
+}
+
+nav ul li a {
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+nav ul li a:hover {
+    background-color: red;
+}
+
+.dropDown {
+    position: absolute;
+    left: 25%;
+    bottom: 112.2px;
+    width: 20%;
+    background-color: lightblue;
+    display: none;
+}
+
+.dropLink:hover .dropDown {
+    display: block;
+}
