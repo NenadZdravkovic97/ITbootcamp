@@ -161,6 +161,48 @@ if ( prviDatum > drugiDatum) {
     console.log("Isti datum");
 }
 
+
+// 01-01-2020
+// 02-02-1900 kad poredimo stringove uvodimo prvu vrednost koja je najjaca, prvo godina, pa mesec pa dan
+//Kretanje od opsteg ka posebnom
+let dat1 = "2020-05-23"; 
+let dat2 = "2021-05-01";
+if (dat1 < dat2) { 
+    console.log(`${dat1} je bio pre ${dat2}`);
+} else if (dat2 < dat1) {
+    console.log(`${dat2} je bio pre ${dat1}`);
+} else {
+    console.log(`${dat1} i ${dat2} su isti`);
+}
+
+
+let danN1 = 04;
+let mesN1 = 05;
+let godN1 = 2020;
+
+let danN2 = 02;
+let mesN2 = 05;
+let godN2 = 2020;
+
+if( godN1 < godN2 ) {
+    console.log("Datum 1 je raniji");
+} else if( godN2 < godN1 ) {
+    console.log("Datum 2 je raniji");
+} else if ( mesN1 < mesN2 ) {
+    console.log("Datum 1 je raniji");
+} else if (mesN2 < mesN1) {
+    console.log("Datum 2 je raniji");
+} else if ( danN1 < danN2) {
+    console.log("Datum 1 je raniji");
+} else if ( danN2 < danN1 ) {
+    console.log("Datum 2 je raniji");
+} else {
+    console.log("Isti datumi");
+}
+
+
+
+
 // 11. 
 // Radno vreme jedne programerske firme je od 9h do 17h. Preuzeti vreme sa računara i ispitati da li u to vreme firma radi ili ne radi.
 
@@ -179,17 +221,34 @@ console.log("Odvaja zadatke");
 // 12. 
 // Za unet početak i kraj radnog vremena dva lekara ispisati DA ukoliko se njihove smene preklapaju, u suprotnom ispisati NE.
 
-let Lekar1Start = 9;
-let Lekar1End = 17;
+// let Lekar1Start = 9;
+// let Lekar1End = 17;
 
-let Lekar2Start = 11;
-let Lekar2End = 19;
+// let Lekar2Start = 11;
+// let Lekar2End = 19;
 
-if (Lekar1Start >= 9 && Lekar1End >=9 && Lekar1End <= 19 && Lekar2End <= 19 ) {
-    console.log("DA");
+// if (Lekar1Start >= 9 && Lekar1End >=9 && Lekar1End <= 19 && Lekar2End <= 19 ) {
+//     console.log("DA");
+// } else {
+//     console.log("NE")
+// }
+
+// Pocetak i kraj radnog vremena prvog lekara
+let p1 = 14;
+let k1 = 20;
+
+// Pocetak i kraj radnog vremena drugog lekara
+let p2 = 21;
+let k2 = 24;
+
+if (k1 < p2) {
+    console.log("Ne");
+} else if(k2 < p1) {
+    console.log("Ne");
 } else {
-    console.log("NE")
+    console.log("Da");
 }
+
 
 // 13. 
 // Za uneti broj ispitati da li je paran ili nije.
