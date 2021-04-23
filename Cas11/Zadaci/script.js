@@ -179,4 +179,54 @@ console.log("Odvaja zadatke");
 // 12. 
 // Za unet početak i kraj radnog vremena dva lekara ispisati DA ukoliko se njihove smene preklapaju, u suprotnom ispisati NE.
 
+let Lekar1Start = 9;
+let Lekar1End = 17;
+
+let Lekar2Start = 11;
+let Lekar2End = 19;
+
+if (Lekar1Start >= 9 && Lekar1End >=9 && Lekar1End <= 19 && Lekar2End <= 19 ) {
+    console.log("DA");
+} else {
+    console.log("NE")
+}
+
+// 13. 
+// Za uneti broj ispitati da li je paran ili nije.
+
+let broj = 10;
+
+if ( broj % 2 == 0) {
+    console.log("Paran broj");
+} else {
+    console.log("Neparan broj");
+}
+
+// 14.
+// Za uneti broj ispisati da li je deljiv sa 3 ili ne.
+
+let broj2 = 40;
+if ( broj2 % 3 === 0) {
+    console.log("Deljiv");
+} else {
+    console.log("Nije deljiv");
+}
+
+// 15. 
+// Za dva uneta broja, od većeg učitanog broja oduzeti manji i rezultat ispisati na ekranu.
+
+let num1 = 40;
+let num2 = 150;
+let res;
+if ( num1 > num2 ) {
+    res = num1 - num2;
+    console.log("Broj jedan je veci",res);
+} else {
+    res = num2 - num1;
+    console.log("Broj dva je veci",res);
+}
+
+
+
+
 
