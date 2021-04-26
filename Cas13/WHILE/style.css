@@ -1,0 +1,21 @@
+img {
+    margin: 10px;
+}
+
+img:nth-child(odd){
+    border: 5px solid black;
+}
+img:nth-child(even) {
+    border: 5px solid green;
+}
+
+p {
+    color: red;
+}
+p:nth-child(2n) {
+    color: blue;
+}
+p:nth-child(3n) {
+    color: green;
+}
+
