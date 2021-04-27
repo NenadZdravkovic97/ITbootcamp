@@ -75,14 +75,32 @@ while (i <= 20) {
 // Kreirati n paragrafa sa proizvoljnim tekstom i naizmenično ih obojiti u tri različite boje
 
 
-i = 1;
-while (i <= 3) {
-    let div = document.createElement("div");
-    div.innerHTML += `<p>Lorem</p>`
-    div.innerHTML += `<p>Lorem</p>`
-    div.innerHTML += `<p>Lorem</p>`
-    document.body.appendChild(div);
-    i++
+// i = 1;
+// while (i <= 3) {
+//     let div = document.createElement("div");
+//     div.innerHTML += `<p>Lorem</p>`
+//     div.innerHTML += `<p>Lorem</p>`
+//     div.innerHTML += `<p>Lorem</p>`
+//     document.body.appendChild(div);
+//     i++
+// }
+
+let i = 0;
+let n = 9;
+
+while (i < n) {
+    if( i % 3 == 0) {
+        document.write(`<p style="color: grey;">Paragraf</p>`);
+    }
+
+    if( i % 3 == 1) {
+        document.write(`<p style="color: red;">Paragraf</p>`);
+    }
+
+    if( i % 3 == 2) {
+        document.write(`<p style="color: orange;">Paragraf</p>`);
+    }
+    i++;
 }
 
 

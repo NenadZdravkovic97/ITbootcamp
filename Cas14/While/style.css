@@ -1,0 +1,20 @@
+img {
+    width: 64px;
+    margin: 0 10px;
+}
+
+.okvir1 {
+    border: 5px dotted black;
+}
+
+.okvir2 {
+    border: 5px solid green;
+}
+
+/* 3n+1 svi oni iteratori koji imaju ostatak 1 pri deljenju sa 3 */
+/* img:nth-child(odd){
+    border: 5px dotted green;
+}
+img:nth-child(even) {
+    border: 5px solid black;
+} */
