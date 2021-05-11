@@ -278,11 +278,12 @@ console.log(plata(5, 20000));
 
 let takmicari = (t, p, n) => {
     let cekanje = 0;
-    if(t < p) {
+    if(t < p || p + n <= t) {
         cekanje = 0;
     } else {
-        let k = t - p;
-        cekanje = n - k;
+        // let k = t - p;
+        // cekanje = n - k;
+        cekanje = p + n - t;
     }
 
     return cekanje;
@@ -292,6 +293,8 @@ console.log(takmicari(15, 20, 25));
 console.log(takmicari(15, 10, 12));
 console.log(takmicari(20, 10, 16));
 console.log(takmicari(20, 12, 20));
+console.log(takmicari(15, 14, 45));
+console.log(takmicari(15, 10, 1));
 
 
 
