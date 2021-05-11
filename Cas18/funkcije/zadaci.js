@@ -124,7 +124,7 @@ function changeColor(color) {
     document.body.innerHTML += `<p style="color: ${color}">Lorem</p>`;
 }
 
-changeColor("yellow");
+changeColor("red");
 
 
 // drugi nacin
@@ -191,17 +191,17 @@ sedmiDan(8);
 
 function deljivSaTri(n , m) {
     let brojac = 0
-    for(i = n; i <= m; i++) {
+    for(let i = n; i <= m; i++) {
         if (i % 3 == 0 ) {
             console.log(i);
             brojac++;
             
         }
     }
-    console.log(brojac);
+    return brojac;
 }
 
-deljivSaTri(1, 40);
+console.log(deljivSaTri(1, 40));
 
 // 9.
 // Napraviti funkciju sumiraj koja određuje sumu brojeva od n do m. 
@@ -209,12 +209,13 @@ deljivSaTri(1, 40);
 
 function sumiraj(n, m) {
     let sum = 0
-    for(i = n; i <= m; i++) {
+    for(let i = n; i <= m; i++) {
         sum = sum + i;
     }
-    console.log(sum);
+    return sum;
 }
-sumiraj(1, 5);
+let zadatak9 = sumiraj(1, 5);
+console.log(zadatak9);
 
 
 
@@ -224,9 +225,106 @@ sumiraj(1, 5);
 
 function mnozi(n, m) {
     let proizvod = 1
-    for(i = n; i <= m; i++) {
+    for(let i = n; i <= m; i++) {
         proizvod = proizvod * i;
     }
-    console.log(proizvod);
+    return proizvod;
 }
-mnozi(1, 5);
+console.log(mnozi(1, 5));
+
+// 11.
+// Napraviti funkciju koja vraća aritmetičku sredinu brojeva od n do m.
+// Brojeve n i m proslediti kao parametre funkciji.
+
+function aritmetickaSredina(n,m) {
+    let brojac = 0;
+    let sum = 0;
+    for(let i = n; i <=m; i++) {
+            sum = sum + i;
+            brojac++;
+    }
+    let arsr = sum / brojac;
+    return arsr;
+}
+
+let zadatak11 = aritmetickaSredina(1, 6);
+console.log(zadatak11);
+
+
+// 12.
+// Napisati funkciju koja vraća aritmetičku sredinu brojeva kojima je poslednja cifra 3 u intervalu od n do m. Brojeve n i m proslediti kao parametre funkciji.
+
+function aritmetickaSredina2(n, m) {
+    let brojac = 0;
+    let sum = 0;
+    for(let i = n; i <=m; i++) {
+        if(i % 10 == 3) {
+            sum = sum + i;
+            brojac++;
+        }
+    }
+    let arsr = sum / brojac;
+    return arsr;
+}
+
+let sredina = aritmetickaSredina2(1, 50);
+
+console.log(sredina);
+
+// 13.
+// Napisati funkciju kojoj se prosleđuje ceo broj a ona ispisuje tekst koji ima prosleđenu veličinu fonta.
+
+function font(num) {
+    if (num % 1 == 0) {
+        document.body.innerHTML += `<p style="font-size:${num}px;">Neki tekst tralala</p>`;
+    }
+}
+
+
+font(50);
+font(30);
+font(15);
+
+// 14.
+// Napisati funkciju koja pet puta ispisuje istu rečenicu, a veličina fonta rečenice treba da bude jednaka vrednosti iteratora. 
+
+function petPutaIsto(recenica) {
+    for(let i = 10; i <= 50; i++) {
+        if (i == 10 || i == 20 || i == 30 || i == 40 || i == 50)
+        document.body.innerHTML += `<p style="font-size:${i}px; color: green;">${recenica} sa velicinom ${i}px</p>`;
+    }
+}
+
+
+petPutaIsto("lorem ipsum");
+
+function petPutaIsto2(recenica) {
+    for(let i = 1; i <= 5; i++) {
+        document.body.innerHTML += `<p style="font-size:${i}em; color: red;">${recenica} sa velicinom ${i}px</p>`;
+}
+}
+
+
+petPutaIsto2("lorem ipsum");
+
+
+
+// function petPuta(num) {
+//     for(let i = 1; i <= 5; i++) {
+//         document.body.innerHTML += `<p style="font-size:${num}px;">Ovo pet puta</p>`;
+//     }
+// }
+
+// petPuta(14);
+
+
+// // sa dva argumenta
+// function petPuta2(num, recenica) {
+//     for(let i = 1; i <= 5; i++) {
+//         document.body.innerHTML += `<p style="font-size:${num}px;">${recenica}</p>`;
+//     }
+// }
+
+// petPuta2(25, "Drugi nacin 5x");
+
+
