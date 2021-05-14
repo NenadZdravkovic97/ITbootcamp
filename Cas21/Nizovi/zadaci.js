@@ -160,12 +160,56 @@ console.log(`Sadrze slovo a i A je ${counter}`);
 
 // 24
 
-let A = [1, 2, 3, 4, 5];
-let B = [1, 2, 3, 4, 5];
+let A = [1, 2, 3, 4, 5, 6];
+let B = [1, 2, 3, 4, 5, 6];
 let C = [];
 
-for (let i = 0; i < A.length || i < B.length; i++) {
+// for (let i = 0; i < A.length || i < B.length; i++) {
+for (let i = 0; i < A.length; i++) {
     C.push(A[i]);
     C.push(B[i]);
 }
 console.log(C);
+
+// 25 
+// a[0] * b[0], a[1] * b[1], a[2] * b[2]
+A = [1, 2, 3, 4, 5];
+B = [1, 2, 3, 4, 5];
+C = [];
+
+// for (let i = 0; i < A.length || i < B.length; i++) {
+for (let i = 0; i < A.length; i++) {
+    C.push(A[i] * B[i]);
+}
+console.log(C);
+
+// 26
+//nije tacno
+// A = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, "radim", "ne radim"]
+// B = [];
+
+// for (let i = 0; i < A.length; i++) {
+//     if (i % 2 == 0) {
+//         B.push(A[i]);
+//     }
+// }
+
+// console.log(B);
+
+// A = [3, 5, 9, 6, 7, 1];
+A = [3, 5, 9, 6, 7, 1, 10, 12, 15, 6];
+B = [];
+
+sum = 0;
+let first;
+let second;
+
+for (let i = 0; i < A.length / 2; i++) {
+    // console.log(A[i]);
+    first = A[i];
+    second = A[A.length -1 - i];
+    sum = (first + second)/2;
+    B.push(sum);
+}
+
+console.log(B);
