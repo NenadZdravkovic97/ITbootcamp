@@ -1,0 +1,20 @@
+.error {
+    color: red;
+    border: solid 1px red;
+}
+.success {
+    color: green;
+    border: solid 1px green;
+}
+
+.small {
+    font-size: 15px;
+}
+
+.medium {
+    font-size: 20px;
+}
+
+.large {
+    font-size: 25px;
+}
