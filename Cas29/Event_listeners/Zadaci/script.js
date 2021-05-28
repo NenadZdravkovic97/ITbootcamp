@@ -63,26 +63,3 @@ plus.addEventListener('click', () =>{
 
 
 
-// 5. 
-// Napraviti input polje i dugme.
-// U input polje treba da se unese ime neke osobe, a na ekranu u paragrafu da se ispiše Zdravo i ime osobe preuzeto iz input polja.
-let writeName = document.querySelector('#writeName');
-let ispis = document.querySelector('#ispis');
-
-writeName.addEventListener('click', () => {
-    let name = document.querySelector('#enterName').value;
-    ispis.innerHTML = `Pozdrav ${name}`;
-});
-
-
-
-// 6.
-// Dopuniti 5. zadatak dodavanjem eventa i proizvoljnog alert-a, kada se klikne dva puta na dugme.
-
-writeName.addEventListener('dblclick', () =>{
-    alert('Dupli klik');
-});
-
-
-
-
