@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.heading h1 {
+    color: #1E90FF;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    padding: 10px;
+    background-color: #ADD8E6;
+    margin: 10px 0;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+
+
+
