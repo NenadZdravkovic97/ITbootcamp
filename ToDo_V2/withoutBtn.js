@@ -1,11 +1,10 @@
-
 const lista = document.querySelector('#lista');
 const unesiObavezuInput = document.querySelector('#unesiObavezu');
-const btnDodaj = document.querySelector('#btnDodaj');
 const rdPocetak = document.querySelector('#pocetak');
 const rdKraj = document.querySelector('#kraj');
+const form = document.querySelector('#form');
 
-btnDodaj.addEventListener('click', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (unesiObavezuInput.value == 0) {
         alert('Unesite obavezu')
@@ -38,22 +37,4 @@ btnDodaj.addEventListener('click', (e) => {
                 lista.style.overflow = 'hidden';
             }
     }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+})

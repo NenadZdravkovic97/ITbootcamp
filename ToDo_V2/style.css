@@ -4,52 +4,64 @@
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
 }
-
-.container {
+.centerAll {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 70vh;
+}
+header h1 {
+    color: #2090FF;
+    padding: 20px 0;
 }
 
-.heading h1 {
-    color: #1E90FF;
-    font-size: 30px;
-    margin-bottom: 30px;
+.listContainer {
+    background-color: rgb(235, 235, 235);
+    width: 250px;
 }
 
 ul {
-    list-style-type: none;
+    list-style: none;
+    height: 300px;
 }
 
 ul li {
     padding: 10px;
     background-color: #ADD8E6;
-    margin: 10px 0;
-    width: 200px;
+    margin-bottom: 7px;
+    width: 250px;
 }
 
-li:hover {
+ul li:hover {
     cursor: pointer;
 }
 
-.textInput{ 
+.unesi {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.unesi #unesiObavezu {
     padding: 5px;
-    width: 200px;
+    margin:12px 0px;
+}
+
+.unesi #btnDodaj {
+    padding: 10px;
+    background-color: #1E90FF;
     margin-bottom: 15px;
 }
 
-.btn {
-    background-color: #1E90FF;
-    padding: 5px;
-    width: 200px;
+.radioBtns {
+    display: flex;
+    flex-direction: column;
 }
 
-.done {
-    text-decoration: line-through;
+.groupRadio {
+    margin-bottom: 10px;
 }
-
 
 
 
