@@ -184,6 +184,41 @@ let najcescaOcena = (niz) => {
 }
 console.log(najcescaOcena(arrFilmovi));
 
+// DRUGI NACIN - Djole
+// let najcescaOcena = (niz) => {
+//     let x = [];
+//     let sveOcene = [];
+//     niz.forEach(film => {
+//         film.ocene.forEach(ocena => {
+//             if (!(x.includes(ocena))) {
+//                 x.push(ocena);
+//             }
+//             sveOcene.push(ocena);
+//         });
+//     });
+
+//     let maxCounter = 0;
+//     let najcescaOcena = undefined;
+//     x.forEach(ocenaX => {
+//         let counter = 0;
+//         sveOcene.forEach(ocena => {
+//             if (ocenaX == ocena) {
+//                 counter++;
+//             }
+//         });
+//         if (maxCounter < counter) {
+//             maxCounter = counter;
+//             najcescaOcena = ocenaX;
+//         }
+//     });
+//     let obj = {
+//         najcescaOcena: najcescaOcena,
+//         counter: maxCounter
+//     }
+//     return obj;
+// }
+// console.log(najcescaOcena(arrFilmovi));
+
 // Napraviti funkciju iznadOcene kojoj se prosleđuje ocena i niz filmova, a ona vraća niz onih filmova koji su bolje ocenjeni od prosleđene ocene.
 let iznadOcene = (ocena, niz) => {
     let arr = [];
