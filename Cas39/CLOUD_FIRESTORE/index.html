@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <!-- MI dodajemo -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAXopDXyjBCh5SMXCwobdftvVfs0pQc2NI",
+            authDomain: "itbootcamp-e0be8.firebaseapp.com",
+            projectId: "itbootcamp-e0be8",
+            storageBucket: "itbootcamp-e0be8.appspot.com",
+            messagingSenderId: "203974887336",
+            appId: "1:203974887336:web:33cc3a4534d9bd17b9ff9d",
+            measurementId: "G-NS4S3C9EEN"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        let db = firebase.firestore(); // dodajemo sami
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
