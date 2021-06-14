@@ -137,45 +137,60 @@ let click2 = (e) => {
     });
 }
 
-formOrder.addEventListener('submit', click2);
+// formOrder.addEventListener('submit', click2);
 
 
 /////////////////////////////////////////////////////
 
-let divOrder2 = document.querySelector('#order2');
-let formOrder2 = document.querySelector('#order2 form');
-let inputArticleName = document.querySelector('#articleName');
-let inputCena1 = document.querySelector('#cena1');
-let inputCena2 = document.querySelector('#cena2');
-let inputSubmit= document.querySelector('#order2Btn');
+let clickGetItems = async() => {
+    let data1 = await getItemsReturnPromise('json/stock.json');
+    let capacity = inputOrder.value;
+    let itemsNoStock = [];
+    data1.forEach(item => {
+        if (item.stock == 0) {
+            itemsNoStock.push(item.id);
+        }
+    });
 
-let ispisiStanje = (e) => {
+
+    let data2 = await getItemsReturnPromise('json/weights.json');
+    let totalWeight = 0;
+    data2.forEach(item => {
+        // Da li niz itemsNoStock sadrzi item.id
+        if (itemsNoStock.includes(item.id)) {
+            // potrebna je tezina artikla
+            totalWeight += item.weight;
+        }
+    });
+    let pMessage = document.createElement('p');
+    if (totalWeight > capacity) {
+        pMessage.style.fontWeight = 'bold';
+        pMessage.style.fontSize = '24px';
+        pMessage.textContent = "Not enough capacity in truck!!!";
+    } else {
+        let data3 = await getItemsReturnPromise('json/prices.json');
+        let totalPrice = 0;
+            data3.forEach(item => {
+                if (itemsNoStock.includes(item.id)) {
+                    totalPrice += item.price;
+                }
+            });
+            pMessage.style.fontWeight = 'bold';
+            pMessage.style.fontSize = '24px';
+            pMessage.textContent = `Total order price: ${totalPrice}`;
+    }
+    return pMessage;
+}
+
+let click3 = (e) => {
     e.preventDefault();
-    let inStock = [];
-    getItemsReturnPromise('json/stock.json')
-    .then((data) => {
-        data.forEach(item => {
-            if (item.stock != 0) {
-                inStock.push(item);
-            }
-        });
-        return getItemsReturnPromise('json/prices.json');
-    })
-    .then((data) => {
-        let price1 = inputCena1.value;
-        let price2 = inputCena2.value;
-        inStock.forEach(item => {
-            // if (item.price > price1 && item.price < price2) {
-            //     console.log(item);
-            // }
-        })
+    clickGetItems()
+    .then(para => {
+        divOrder.appendChild(para);
     })
     .catch(err => {
         console.log(err);
     })
 }
 
-
-
-
-formOrder2.addEventListener('submit', ispisiStanje);
+formOrder.addEventListener('submit', click3);
