@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="chat-app-container">
+
+        <header>
+            <div>
+                <h1 class="l-heading">ITBootcamp Chat</h1>
+            </div>
+            <div>
+                <h3 class="m-heading">Choose a chatroom</h3>
+            </div>
+        </header>
+
+        <section class="navigation">
+            <nav id="main-nav">
+                <button id="btnGeneral" class="btn active">#general</button>
+                <button id="btnJs" class="btn">#js</button>
+                <button id="btnHomeworks" class="btn">#homeworks</button>
+                <button id="btnTests" class="btn">#tests</button>
+            </nav>
+        </section>
+
+
+
+        <!-- Prostor za poruke -->
+        <section id="chat-body">
+            <!-- Prostor za poruke -->
+            <ul>
+
+            </ul>
+        </section>
+
+
+        <section id="inputs">
+            <form id="formMessage">
+                <input type="text" name="message" id="inputMessage" placeholder="Your message...">
+                <input type="submit" value="Send" id="sendBtn" class="btn">
+            </form>
+
+
+            <form id="formUsername">
+                <input type="text" name="username" id="inputUsername" placeholder="Update username">
+                <input type="submit" value="Update" id="updateBtn" class="btn">
+            </form>
+
+        </section>
+
+
+    </div>
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    
+    <script src="js/dbcon.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>
