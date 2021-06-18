@@ -1,8 +1,9 @@
-class Chatroom {
+export class Chatroom {
     constructor(room, username) {
         this.room = room;
         this.username = username;
         this.chats = db.collection('chats');
+        this.unsub;
     }
 
     // Seteri
@@ -10,12 +11,8 @@ class Chatroom {
         this._room = room;
     }
     set username(username) {
-        // this._username = username;
-        if (username.trim() == null || username.trim() == "" || username.trim() == " " || username.length < 2 || username.length > 10) {
-            alert("Please enter a valid name.");
-        } else {
-            this._username = username;
-        }
+        this._username = username;
+        // Dodaj validaciju za prazne strinogve
     }
 
     // Geteri
@@ -41,9 +38,14 @@ class Chatroom {
         let response = await this.chats.add(chat);
         return response;
     }
+
+
     // callback
     getChats(callback) {
-        this.chats.onSnapshot(snapshot => {
+        this.unsub = this.chats
+        .where('room', '==', this.room)
+        .orderBy('created_at')
+        .onSnapshot(snapshot => {
             snapshot.docChanges().forEach(change => {
                 if (change.type == 'added') {
                     // console.log('Promena u bazi');
@@ -54,41 +56,14 @@ class Chatroom {
         });
     }
 
-    
+    updateUsername(newUsername) {
+        this.username = newUsername;
+    }
+
+    updateRoom(newRoom) {
+        this.room = newRoom;
+        if (this.unsub) {
+            this.unsub();
+        }
+    }
 }
-
-
-let obj1 = new Chatroom('general', 'Boja');
-let obj2 = new Chatroom('tests', 'Milica');
-
-// POZIV ASINHRONE METODE addChat
-// obj2.addChat("Test poruka")
-// .then(() => {
-//     console.log('Cet je dodat');
-// })
-// .catch(err => {
-//     console.log(err);
-// });
-
-// obj1.addChat("Zdravo na general sobu!")
-// .then(() => {
-//     console.log('Cet je dodat');
-// })
-// .catch(err => {
-//     console.log(err);
-// });
-
-
-// POZIV CALLBACK FUNKCIJE getChats
-obj2.getChats(data => {
-    console.log(data);
-});
-
-
-
-
-
-
-
-
-

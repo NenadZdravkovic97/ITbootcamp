@@ -30,17 +30,7 @@ ul {
     list-style-type: none;
 }
 
-.primary-color {
-    color: purple;
-}
 
-.text-color {
-    color: #A853A3;
-}
-
-.date-color {
-    color: rgb(119, 117, 117);
-}
 
 /* HEADER */
 
@@ -79,40 +69,44 @@ header div h3 {
     background-color: var(--dark-color);
 }
 
-@media only screen and (max-width: 800px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-    }
 
-    nav button {
-        margin: 0.5rem 0;
-    }
-
-    .btn {
-        padding: 0.4rem;
-        width: 8rem;
-    }
-
-}
 
 /* Chat body */
+
+.primary-color {
+    color: purple;
+}
+
+.text-color {
+    color: #A853A3;
+}
+
+.date-color {
+    color: rgb(119, 117, 117);
+}
+
 #chat-body {
     margin: 1rem 0;
     width: 50%;
+    height: 25rem;
     background-color: rgb(245, 245, 245);
     padding: 1rem;
     border-radius: 20px;
     font-size: 1.2rem;
+    overflow-y: scroll;
+}
+#chat-body ul {
+    padding: 0.3rem;
 }
 
 #chat-body ul li {
-    margin: 0.5rem 0;
+    margin: 1.2rem 0;
 }
+
 
 .message {
     background-color: #D8BFD8;
-    width: 50%;
+    width: 80%;
     padding: 0.5rem;
     border-radius: 10px;
 }
@@ -123,7 +117,7 @@ header div h3 {
 /* Forms */
 
 #inputs {
-    margin-top: 50px;
+    margin-top: 1rem;
     /* width: 50%; */
 }
 
@@ -147,6 +141,35 @@ input[type="submit"] {
     width: 5rem;
 }
 
+
+
+@media only screen and (max-width: 800px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav button {
+        margin: 0.5rem 0;
+    }
+
+    .btn {
+        padding: 0.4rem;
+        width: 8rem;
+    }
+    
+    #chat-body {
+        width: 100%;
+    }
+
+    .message {
+        background-color: #D8BFD8;
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+}
 
 
 
