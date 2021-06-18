@@ -10,7 +10,12 @@ class Chatroom {
         this._room = room;
     }
     set username(username) {
-        this._username = username;
+        // this._username = username;
+        if (username.trim() == null || username.trim() == "" || username.trim() == " " || username.length < 2 || username.length > 10) {
+            alert("Please enter a valid name.");
+        } else {
+            this._username = username;
+        }
     }
 
     // Geteri
@@ -54,7 +59,7 @@ class Chatroom {
 
 
 let obj1 = new Chatroom('general', 'Boja');
-let obj2 = new Chatroom('tests', 'Milica')
+let obj2 = new Chatroom('tests', 'Milica');
 
 // POZIV ASINHRONE METODE addChat
 // obj2.addChat("Test poruka")
