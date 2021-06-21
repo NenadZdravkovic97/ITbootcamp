@@ -93,10 +93,12 @@ header div h3 {
     padding: 1rem;
     border-radius: 20px;
     font-size: 1.2rem;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 #chat-body ul {
+    height: 100%;
     padding: 0.3rem;
+    overflow-y: scroll; 
 }
 
 #chat-body ul li {
@@ -108,7 +110,7 @@ header div h3 {
     background-color: #D8BFD8;
     width: 80%;
     padding: 0.5rem;
-    border-radius: 10px;
+    border-radius: 0 0 15px 15px;
 }
 
 

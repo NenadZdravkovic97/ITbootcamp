@@ -11,8 +11,12 @@ export class Chatroom {
         this._room = room;
     }
     set username(username) {
-        this._username = username;
-        // Dodaj validaciju za prazne strinogve
+        if(username.length < 2 || username.length > 10 || !username.replace(/\s/g, '').length) {
+            alert('invalid username');
+        }
+        else {
+            this._username = username;
+        }
     }
 
     // Geteri
@@ -26,17 +30,17 @@ export class Chatroom {
     // Metode
 
     async addChat(message) {
-        let date = new Date();
+            let date = new Date();
 
-        let chat = {
-            message: message,
-            username: this.username,
-            room: this.room,
-            created_at: firebase.firestore.Timestamp.fromDate(date)
-        }
+            let chat = {
+                message: message,
+                username: this.username,
+                room: this.room,
+                created_at: firebase.firestore.Timestamp.fromDate(date)
+            }
 
-        let response = await this.chats.add(chat);
-        return response;
+            let response = await this.chats.add(chat);
+            return response;
     }
 
 
@@ -58,6 +62,11 @@ export class Chatroom {
 
     updateUsername(newUsername) {
         this.username = newUsername;
+        localStorage.setItem("username", newUsername);
+        // POSTAVLLJANJE VREDNOSTI U LOKALNOJ MEMORIJI
+        // localStorage.setItem("Koje ime dajemo promenljivoj u lokalnoj memoriji", vrednost koju dodeljujemo);
+        // UZIMANJE VREDNOSTI IZ LOKALNE MEMORIJE
+        // localStorage.username
     }
 
     updateRoom(newRoom) {
