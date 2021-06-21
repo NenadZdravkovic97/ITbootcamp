@@ -99,6 +99,8 @@ header div h3 {
     height: 100%;
     padding: 0.3rem;
     overflow-y: scroll; 
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 
 #chat-body ul li {
@@ -108,11 +110,23 @@ header div h3 {
 
 .message {
     background-color: #D8BFD8;
-    width: 80%;
+    width: 50%;
     padding: 0.5rem;
     border-radius: 0 0 15px 15px;
 }
 
+.message-right {
+    background-color: #FEE4C3;
+    width: 50%;
+    /* width: 30rem; */
+    padding: 0.5rem;
+    border-radius: 0 0 15px 15px;
+    float: right;
+}
+
+.right {
+    overflow: hidden;
+}
 
 
 
@@ -164,12 +178,6 @@ input[type="submit"] {
         width: 100%;
     }
 
-    .message {
-        background-color: #D8BFD8;
-        width: 100%;
-        padding: 0.5rem;
-        border-radius: 10px;
-    }
 
 }
 

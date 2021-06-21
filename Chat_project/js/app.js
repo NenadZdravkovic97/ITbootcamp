@@ -45,6 +45,12 @@ chatroom1.getChats(data => {
     list.templateLI(data);
 });
 
+// Dodajem aktive klasu na navigaciju
+allNavBtns.forEach(elem => {
+    if (elem.id == room()) {
+        elem.classList.add('active');
+    }
+});
 
 // Dodavanje poruke u bazu
 formMsg.addEventListener('submit', (e) => {
@@ -75,6 +81,8 @@ formUsername.addEventListener('submit', (e) => {
     para.innerHTML = username;
     setTimeout(function () {
         para.innerHTML = '';
+        // Updatuje listu
+        location.reload();
     }, 3000);
 });
 
@@ -95,7 +103,7 @@ navRooms.addEventListener('click', (e) => {
 
         allNavBtns.forEach(elem => {
             elem.classList.remove('active');
-        })
+        });
         e.target.classList.add('active');
         // 4. Postavi u local storage da smo presli u neku drugu sobu
         localStorage.setItem("room", e.target.id);
