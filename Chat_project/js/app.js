@@ -22,7 +22,8 @@ let username = () => {
     if (localStorage.username) {
         return localStorage.username;
     } else {
-        return "anonymus";
+        localStorage.setItem("username", 'anonymus');
+        return localStorage.username;
     }
 }
 
