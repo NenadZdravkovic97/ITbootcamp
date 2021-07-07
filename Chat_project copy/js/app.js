@@ -1,5 +1,9 @@
-import {Chatroom} from "./chat.js"
-import {ChatUI} from "./ui.js"
+import {
+    Chatroom
+} from "./chat.js"
+import {
+    ChatUI
+} from "./ui.js"
 
 // DOM 
 let ulChatList = document.querySelector('ul');
@@ -15,6 +19,8 @@ let para = document.querySelector("#usernameP");
 // Promena soba
 let navRooms = document.querySelector('#main-nav');
 let allNavBtns = document.querySelectorAll('.nav-btn');
+
+
 
 
 // Citamo iz lokalne memorije username, ukoliko postoji, u suprotnom default username je anonymus
@@ -62,12 +68,12 @@ formMsg.addEventListener('submit', (e) => {
         alert('Enter a valid message');
     } else {
         chatroom1.addChat(message)
-        .then(() => {
-            formMsg.reset();
-        })
-        .catch(err => {
-            console.log(err);
-        });
+            .then(() => {
+                formMsg.reset();
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
 });
 
@@ -80,7 +86,7 @@ formUsername.addEventListener('submit', (e) => {
     chatroom1.updateUsername(username);
     formUsername.reset();
     para.innerHTML = username;
-    setTimeout(function () {
+    setTimeout(() => {
         para.innerHTML = '';
         // Updatuje listu
         location.reload();
@@ -111,3 +117,25 @@ navRooms.addEventListener('click', (e) => {
     }
 });
 
+
+
+
+// Iznad forme za slanje poruke, napraviti formu za odabir boje.
+// Ova forma treba da sadrži input polje (color picker) za odabir željene boje i
+// dugme za promenu boje (Update color).
+// Podrazumevana boja u color picker-u je bela.
+
+// changeColor
+// colorInput
+let changeColorBtn = document.querySelector('#updateColorBtn');
+let inputChangeColor = document.querySelector('#colorInput');
+
+changeColorBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    setTimeout(() => {
+        document.body.style.backgroundColor = inputChangeColor.value;
+    }, 500);
+    localStorage.setItem('backgroundColor', inputChangeColor.value)
+});
+
+document.body.style.backgroundColor = localStorage.backgroundColor;

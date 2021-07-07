@@ -128,7 +128,19 @@ header div h3 {
     overflow: hidden;
 }
 
+/* Trash icon */
 
+.message,
+.message-right {
+    overflow: hidden;
+}
+
+.fa-trash-alt {
+    color: grey;
+    float: right;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
 
 /* Forms */
 
@@ -157,6 +169,19 @@ input[type="submit"] {
     width: 5rem;
 }
 
+/* Textarea zadatak */
+form textarea {
+    padding: 0.4rem;
+    /* width: 25%; */
+    border: 1px solid #333;
+    border-radius: 10px;
+    width: 60%;
+}
+
+#formMessage {
+    display: flex;
+    gap: 0.4rem;
+}
 
 
 @media only screen and (max-width: 800px) {
@@ -170,7 +195,7 @@ input[type="submit"] {
     }
 
     .btn {
-        padding: 0.4rem;
+        /* padding: 0.4rem; */
         width: 8rem;
     }
     
@@ -186,3 +211,19 @@ input[type="submit"] {
 
 
 
+/* Update color */
+
+#updateColorBtn {
+    width: 8rem;
+}
+
+#changeColor {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+input[type="color"] {
+    border: 1px solid #333;
+    border-radius: 10px;
+}

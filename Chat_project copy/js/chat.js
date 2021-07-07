@@ -11,10 +11,9 @@ export class Chatroom {
         this._room = room;
     }
     set username(username) {
-        if(username.length < 2 || username.length > 10 || !username.replace(/\s/g, '').length) {
+        if (username.length < 2 || username.length > 10 || !username.replace(/\s/g, '').length) {
             alert('invalid username');
-        }
-        else {
+        } else {
             this._username = username;
         }
     }
@@ -30,35 +29,37 @@ export class Chatroom {
     // Metode
 
     async addChat(message) {
-            let date = new Date();
+        let date = new Date();
 
-            let chat = {
-                message: message,
-                username: this.username,
-                room: this.room,
-                created_at: firebase.firestore.Timestamp.fromDate(date)
-            }
+        let chat = {
+            message: message,
+            username: this.username,
+            room: this.room,
+            created_at: firebase.firestore.Timestamp.fromDate(date)
+        }
 
-            let response = await this.chats.add(chat);
-            return response;
+        let response = await this.chats.add(chat);
+        return response;
     }
+
 
 
     // callback
     getChats(callback) {
         this.unsub = this.chats
-        .where('room', '==', this.room)
-        .orderBy('created_at')
-        .onSnapshot(snapshot => {
-            snapshot.docChanges().forEach(change => {
-                if (change.type == 'added') {
-                    // console.log('Promena u bazi');
-                    // console.log(change.doc.data()); // ispis dokumenata koji su dodati u bazu
-                    callback(change.doc.data());
-                }
+            .where('room', '==', this.room)
+            .orderBy('created_at')
+            .onSnapshot(snapshot => {
+                snapshot.docChanges().forEach(change => {
+                    if (change.type == 'added') {
+                        // console.log('Promena u bazi');
+                        // console.log(change.doc.data()); // ispis dokumenata koji su dodati u bazu
+                        callback(change.doc.data());
+                    }
+                });
             });
-        });
     }
+
 
     updateUsername(newUsername) {
         this.username = newUsername;
